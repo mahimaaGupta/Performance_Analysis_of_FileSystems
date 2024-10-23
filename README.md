@@ -1,33 +1,49 @@
-Experiment designed to draw comparitive study of Mac APFS against Windows NTFS. 
+<H1> Comparative Analysis of Apple APFS and Windows NTFS </H1>
 
-To design the experiment, two factor full factorial design has been implemented. This model has been borrowed from book by Raj Jain[Art of Computer Systems Performance Analysis Techniques for Experimental Design Measurements Simulation And Modeling]. Following metrics are being considered for the experiment:
-1. Response Time
-2. Read Throughput
-3. Write Throughput
-4. CPU Utilization
+This study shows the comparative analysis of Apple APFS and Windows NTFS. A full factorial experiment has been designed for analysis. It also discusses how ExFAT bridges the gap between NTFS and APFS. 
+
+<H2> Design </H2>
+Full Factorial Design.<br>
+w.r.f Design Model mentioned in  Art of Computer Systems Performance Analysis Techniques[Raj Jain]
+Machines used :
+<ul>
+<li> Apple Macbook Pro </li>
+<li> ROG Strix G17 </li>
+<li> Custom PC i9 10th Gen 24GB RTX 3090 </li>
+</ul>
+In each iteration, three repetitions have been done for all four metrics. Average values for read throughput, write throughput and CPU Utilization have been displayed in the table for simplicity. 
+<H3> Metrics </H3>
+Following metrics are being considered for the experiment:<br>
+<ul>
+  <li> Response Time </li>
+  <li> Read Throughput </li>
+  <li> Write Throughput </li>
+  <li> CPU Utilization </li>
+</ul>
 
 Read Throughput = Total Bytes Read / Total Read Time
 
 Write Throughput = Total Bytes Written / Total Write Time
+<H3> Factors and Levels </H3>
+For understanding the behavior of the file systems, various operations must be performed on the files of different sizes. Operations such as reading a file, writing a file, renaming a file, copy/cut/paste a file, changing permissions of a file have been performed. We also need to taken the processor power into consideration. Faster processors would result in faster queries. The processors should be of comparable capacity and power. Therefore, the Two Factors that are being considered are:
+<ol>
+<li> File Size </li>
+<li> Type of Processor </li>
+</ol>
 
-Two Factors are being considered:
-1. File Size
-2. Type of Processor
+Four levels for file size have been selected - 
+<ul>
+  Small File Sizes 
+  <li> 100 MB </li>
+  <li> 1GB </li>
+  Large File Sizes
+  <li> 5GB </li>
+  <li> 10GB </li>
+</ul>
 
-There are 4 levels in file size –
-1. 100 MB
-2. 1GB
-3. 5GB
-4. 10GB
-
-There are 3 levels in type of processors –
-1. Apple M1 Pro
-2. Ryzen 7 6800H
-3. Intel i9 10th Generation
-
-Machines used :
-• Apple Macbook Pro
-• ROG Strix G17
-• Custom PC i9 10th Gen 24GB RTX 3090
-
-In each iteration, three repetitions have been done for all four metrics. Average values for read throughput, write throughput and CPU Utilization have been displayed in the table for simplicity. 
+Three levels for processors have been selected which represent three different types of processors with comparable processing power - 
+<ul>
+  <li> Apple M1 Pro </li>
+  <li> Ryzen 7 6800H </li>
+  <li> Intel i9 10th Generation </li>
+</ul>
